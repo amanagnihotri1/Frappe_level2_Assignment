@@ -73,7 +73,7 @@
    "fieldname": "courses",
    "fieldtype": "Table",
    "label": "Courses",
-   "options": "course"
+   "options": "Course"
   },
   {
    "fieldname": "participants",
