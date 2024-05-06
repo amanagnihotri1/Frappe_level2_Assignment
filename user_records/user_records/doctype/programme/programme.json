@@ -71,9 +71,9 @@
   },
   {
    "fieldname": "courses",
-   "fieldtype": "Link",
+   "fieldtype": "Table",
    "label": "Courses",
-   "options": "Course"
+   "options": "course"
   },
   {
    "fieldname": "participants",
