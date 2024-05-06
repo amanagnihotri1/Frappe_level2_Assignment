@@ -80,7 +80,7 @@ bench set-config -g developer_mode 1
    bench use your_bench_name
    bench start
    ``` 
-4. Access the "Student" module from the main menu.
+4. Access already created module from the main menu.
 5. Create new student records by filling in the required fields.
 6. Optionally, utilize the "Create User" button to generate corresponding system users.
 7. Save the record to store the student information in the database.
