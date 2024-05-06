@@ -16,5 +16,8 @@ def total_credits(courses):
 		Calculate and return total credits
 		"""
 	return str(credits)
+def fetch_student_image(student_name):
+         = frappe.get_doc("Student", student_name)
+return student_doc.student_image
 class Programme(Document):
     pass
