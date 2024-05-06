@@ -1,6 +1,6 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# **Frappe Doctype Assignment Level-1**
+# **Frappe Doctype Assignment Level-2**
 
 ## Table of Contents
 
@@ -11,16 +11,33 @@
 - [License](#license)
 ## Introduction 
 The Course Doctype is intended to store information about individual courses, including their name, code, credits, academic year, and topics covered.
-### Course Doctype Fields
-- **Course Name(Data)**: Field to store the name of the course.
-- **Course Code (Data)**:Field to store the unique code assigned to the course.
-- **Credits (Float)**: Field to store the number of credits associated with the course..
-- **Academic Year (Link)**:Link field linking to the Academic Year doctype..
-- **Topics (Table)**: Child table to add topics covered in the course.
-### Topics Doctype
-The Topics Doctype is designed to store information about topics covered within courses.
-- **Topic Name (Data)**:Field to store the name of the topic.
-- **Topic Description (Text)**:Text field providing a description of the topic.
+## Doctype: Programme
+
+The Program doctype stores information about educational programs. It includes the following fields:
+- **program_name**: A field to store the name of the program.
+- **description**: A text field providing a description of the program.
+- **start_date** and **end_date**: Date fields to store the start and end dates of the program.
+- **duration**: A field to specify the duration of the program in months.
+- **total_credits**: A field to store the total credits associated with the program. It sums up all the credits inside the courses linked to the program.
+- **status**: A select field to indicate the status of the program (Planned, Ongoing, Completed).
+- **instructor**: A MultiTable link field linking the program to an employee who coordinates it. It filters only those employees with "Instructor" as their type.
+- **participants**: A table field to list participants in the program. It includes a subfield "participant" which links to the "Student" doctype. It also includes a button named "preview" to show the participant's profile picture from the user doctype.
+- **courses**: A table field to associate courses with the program. Inside this table, there's a subfield "course" which is a link field to the "Course" doctype.
+
+## Doctype: Course
+
+The Course doctype stores information about individual courses. It includes the following fields:
+- **Course Name**: A field to store the name of the course.
+- **Course Code**: A field to store the unique code assigned to the course.
+- **Credits**: A field to store the number of credits associated with the course.
+- **Academic Year**: A link field linking to the Academic Year doctype.
+- **Topics**: A child table to add topics covered in the course.
+
+## Doctype: Topics
+
+The Topics doctype stores information about topics covered within courses. It includes the following fields:
+- **Topic Name**: A field to store the name of the topic.
+- **Topic Description**: A text field providing a description of the topic.
 ## Technologies Used
 
 - Frappe
